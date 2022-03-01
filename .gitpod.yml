@@ -1,11 +1,11 @@
 tasks:
   - name: Docker-compose
-    command: cd Docker && docker-compose up -d && gp sync-done prev
+    command: cd Docker && docker-compose up -d && gp sync-done prev && gp preview "https://www.yelp.com/biz/social-brew-cafe-pyrmont"
 
   - name: iKnow-terminal
-    command: gp sync-await prev && sleep 60 && docker exec -it iknow bash -c "/home/iknow/iknow.py https://www.yelp.com/biz/social-brew-cafe-pyrmont"
+    command: gp sync-await prev && sleep 60 && docker exec -it iknow bash -c "python3 /home/iknow/iknow.py https://www.yelp.com/biz/social-brew-cafe-pyrmont"
     openMode: split-right
  
   - name: Bert-terminal
-    command:  gp sync-await prev && sleep 60 && docker exec -it bert /bin/bash -c "/home/bert/bert.py https://www.yelp.com/biz/social-brew-cafe-pyrmont"
+    command:  gp sync-await prev && sleep 60 && docker exec -it bert /bin/bash -c "python3 /home/bert/bert.py https://www.yelp.com/biz/social-brew-cafe-pyrmont"
     openMode: split-right
