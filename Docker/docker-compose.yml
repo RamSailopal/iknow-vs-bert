@@ -24,7 +24,7 @@ services:
       - ../iknow:/home/bert
    networks:
       - yottanet
-   entrypoint: [ "bash", "-c", "tail -f /dev/null" ]
+   entrypoint: [ "bash", "-c", "python3 -m pip install beautifulsoup4 pandas numpy transformers && tail -f /dev/null" ]
 
 
 networks:
