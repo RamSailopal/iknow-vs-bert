@@ -1,0 +1,33 @@
+#
+#       AUTHOR - Raman Sailopal
+#
+#       docker compose yml file for the YottaDB-Dashboard stack
+#
+version: "2"
+services:
+ iknow:
+   image: docker.io/ramb0/iknow
+   hostname: iknow
+   container_name: iknow
+   volumes:
+      - ../iknow:/home/iknow
+      - ../pdfs:/home/pdfs
+   networks:
+      - yottanet
+   entrypoint: [ "bash", "-c", "python3 -m pip install beautifulsoup4 && tail -f /dev/null" ]
+ 
+ bert:
+   image: docker.io/pytorch/pytorch
+   hostname: bert
+   container_name: bert
+   volumes:
+      - ../iknow:/home/bert
+   networks:
+      - yottanet
+   entrypoint: [ "bash", "-c", "tail -f /dev/null" ]
+
+
+networks:
+    yottanet:
+volumes:
+    app-volume:
