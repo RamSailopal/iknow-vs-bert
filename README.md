@@ -8,3 +8,8 @@ iKnow uses **"semantic attributes**" as a means of discovering the sentiment of 
 
 The review https://www.yelp.com/biz/social-brew-cafe-pyrmont is taken and then used as source data for both Bert and iKnow to process. Both will output sentiment scores that can then be compared to the actual scores on the Yelp site.
 
+# References
+
+**Intersystems iKnow** - https://github.com/intersystems/iknow
+
+**Google Bert** - https://github.com/google-research/bert
