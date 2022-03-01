@@ -1,5 +1,7 @@
 # iknow-vs-bert
 
+![Alt text](iknow-bert.webp?raw=true "iKnow vs Bert")
+
 A repo comparing the Natural Language Processing (NLP) sentiment accuracy of iKnow vs Bert. 
 
 Bert uses training data (https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment) to train it's model.
