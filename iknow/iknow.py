@@ -38,7 +38,7 @@ for i in reviews:
                   s['entities'][ent]['colour'] = Fore.RED
 
    totcnt=poscnt+negcnt
-   perpos=(poscnt/totcnt)*100
+   perpos=((poscnt/totcnt)/2)*10
    print(str(t) + "\t" + text[0:50] + "...\t" + str("{:.2f}".format(perpos)))
    t=t+1
 
