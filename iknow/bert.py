@@ -19,7 +19,7 @@ tokenizer = AutoTokenizer.from_pretrained('nlptown/bert-base-multilingual-uncase
 
 model = AutoModelForSequenceClassification.from_pretrained('nlptown/bert-base-multilingual-uncased-sentiment')
 
-r = requests.get('https://www.yelp.com/biz/social-brew-cafe-pyrmont')
+r = requests.get(sys.argv[1])
 soup = BeautifulSoup(r.text, 'html.parser')
 regex = re.compile('.*comment.*')
 results = soup.find_all('p', {'class':regex})
